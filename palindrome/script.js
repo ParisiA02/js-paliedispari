@@ -13,28 +13,26 @@
 */
 
 let parola = prompt("Inserisci la parola da controllare: ");
-palindroma(parola);
+const risultato = palindroma(parola);
 
-if (controllo){
+if (risultato){
     console.log("La parola è palindroma");
 }else{
     console.log("La parola non è palindroma");
 }
 
 function palindroma(str){
-
+    let result = true;
     let len = str.length;
     let mid = Math.floor(len/2);
 
     for (let i = 0; i < mid; i++) {
         if (str[i] !== str[len - 1 - i]) {
-            controllo = false;
-            return controllo;
+            result = false;
         }
     }
 
-    controllo = true;
-    return controllo;
+    return result;
 }
 
  
