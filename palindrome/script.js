@@ -31,7 +31,6 @@ function palindroma(str){
             result = false;
         }
     }
-
     return result;
 }
 
